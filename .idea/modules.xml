@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/lfa/lfa.iml" filepath="$PROJECT_DIR$/lfa/lfa.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lfa_trabalhopratico1_20212.iml" filepath="$PROJECT_DIR$/.idea/lfa_trabalhopratico1_20212.iml" />
     </modules>
   </component>
