@@ -26,7 +26,7 @@ public class ConverterNFAtoDFA {
         this.transitions.addAll(transitions);
         this.states.addAll(states);
     }
-}
+
 private ArrayList<Transition> getStateTransitions(String state, ArrayList<Transition> transitions) {
     ArrayList<Transition> stateTransitions = new ArrayList<>();
 
@@ -56,4 +56,52 @@ private Transition getStateTransitionsWithSymbol(
         return null;
     }
     return stateTransitions.get(0);
+
 }
+
+    // Função para remover palavras repetidas
+    private String removeWordsRepeatedAndOrder(String string) {
+        StringBuilder stringBuilder = new StringBuilder();
+        String[] strings = string.split(",");
+        Arrays.sort(strings);
+        for (String str : strings) {
+            if (!String.valueOf(stringBuilder).contains(str)) {
+                if (stringBuilder.length() == 0) {
+                    stringBuilder.append(str);
+                } else {
+                    stringBuilder.append(",").append(str);
+                }
+            }
+        }
+
+        return stringBuilder.toString();
+    }
+
+    // Funções para atualizar os estados, transições e estados de aceitação
+    public ArrayList<State> getNewStates() {
+        ArrayList<String> read = new ArrayList<>();
+        for (Transition transition : this.newTransitions) {
+            if (!read.contains(transition.getFrom().getValue())) {
+                this.newStates.add(transition.getFrom());
+                read.add(transition.getFrom().getValue());
+            }
+        }
+        return this.newStates;
+    }
+
+    public ArrayList<Transition> getNewTransitions() {
+        return newTransitions;
+    }
+
+    public ArrayList<State> getNewAcceptings() {
+        for (State accepting : this.accepting) {
+            for (State state : this.getNewStates()) {
+                if (state.getValue().contains(accepting.getValue())) {
+                    this.newAcceptings.add(state);
+                }
+            }
+        }
+        return newAcceptings;
+    }
+}
+
