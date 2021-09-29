@@ -27,3 +27,33 @@ public class ConverterNFAtoDFA {
         this.states.addAll(states);
     }
 }
+private ArrayList<Transition> getStateTransitions(String state, ArrayList<Transition> transitions) {
+    ArrayList<Transition> stateTransitions = new ArrayList<>();
+
+    for (Transition transition : transitions) {
+        if (transition.getFrom().getValue().equals(state)) {
+            stateTransitions.add(transition);
+        }
+    }
+    if (stateTransitions.toArray().length == 0) {
+        return null;
+    }
+    return stateTransitions;
+}
+
+private Transition getStateTransitionsWithSymbol(
+        String state, ArrayList<Transition> transitions, String symbol
+) {
+    ArrayList<Transition> stateTransitions = new ArrayList<>();
+
+    for (Transition transition : transitions) {
+        if (transition.getFrom().getValue().equals(state) && transition.getAlphabet().equals(symbol)) {
+            stateTransitions.add(transition);
+        }
+    }
+
+    if (stateTransitions.toArray().length == 0) {
+        return null;
+    }
+    return stateTransitions.get(0);
+}
