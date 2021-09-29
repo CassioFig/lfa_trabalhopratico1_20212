@@ -68,4 +68,13 @@ public class Automaton {
         return null;
     }
 
+    private boolean isAccepted(State state) {
+        for (State state_ : accepting) {
+            if (state.getValue().equals(state_.getValue())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
