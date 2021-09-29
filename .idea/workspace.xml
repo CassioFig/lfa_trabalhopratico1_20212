@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f31a6cc4-adbc-45cb-8b8a-163d8a011263" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lfa/src/services/Automaton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lfa/src/services/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lfa/src/services/Transition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +60,7 @@
       <workItem from="1630952711606" duration="208000" />
       <workItem from="1630952958099" duration="452000" />
       <workItem from="1632140800020" duration="603000" />
-      <workItem from="1632524487009" duration="805000" />
+      <workItem from="1632524487009" duration="1401000" />
     </task>
     <servers />
   </component>

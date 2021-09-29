@@ -1,5 +1,12 @@
 package services;
 
+import utils.AutomatonReader;
+import utils.Parameters;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
+@SuppressWarnings("unchecked")
 public class Automaton {
     
     private AutomatonReader automatonFile;
@@ -49,6 +56,16 @@ public class Automaton {
 
             this.transitions.add(new Transition(to_, from_, symbols.get(i)));
         }
+    }
+
+    private State getNextState(State to, String symbol) {
+        for (Transition transition: transitions) {
+            if (transition.getFrom().getValue().equals(to.getValue())
+                    && transition.getAlphabet().equals(symbol)) {
+                return transition.getTo();
+            }
+        }
+        return null;
     }
 
 }
