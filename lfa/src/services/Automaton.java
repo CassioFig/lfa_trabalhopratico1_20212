@@ -77,4 +77,36 @@ public class Automaton {
         return false;
     }
 
+    // Função para testar a string
+    private void test(String string) {
+        State state = this.initial;
+        int index = 0;
+        while (index < string.length()) {
+            if (stringNotInAlphabet(string)) {
+                System.out.println("Palavra não existe no alfabeto!");
+                break;
+            }
+            String symbol = String.valueOf(string.charAt(index));
+            state = getNextState(state, symbol);
+            index++;
+        }
+
+        if (isAccepted(state)) {
+            System.out.println("String aceita!");
+        } else {
+            System.out.println("String recusada!");
+        }
+    }
+
+    // Função para testar se a string está no alfabeto
+    private boolean stringNotInAlphabet(String string) {
+        boolean isValid = true;
+        int index = 0;
+        while (index < string.length()) {
+            isValid = !alphabet.contains(String.valueOf(string.charAt(index)));
+            index++;
+        }
+        return isValid;
+    }
+
 }
