@@ -1,0 +1,9 @@
+#states
+
+#initial
+
+#accepting
+
+#alphabet
+
+#transitions

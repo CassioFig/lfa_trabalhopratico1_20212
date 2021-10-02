@@ -1,6 +1,7 @@
 package services;
 
 import utils.AutomatonReader;
+import utils.ConverterNFAtoDFA;
 import utils.Parameters;
 
 import java.io.FileNotFoundException;
@@ -14,7 +15,7 @@ public class Automaton {
     private State initial;
     private ArrayList<State> accepting = new ArrayList<>();
     private ArrayList<String> alphabet = new ArrayList<>();
-    private ArrayList<Transition> transitions = new ArrayList<>();
+    public ArrayList<Transition> transitions = new ArrayList<>();
 
     public Automaton() {
         this.automatonFile = new AutomatonReader();
@@ -59,7 +60,32 @@ public class Automaton {
     }
 
     public String testString(String string) {
+        if (isNFA()) {
+            this.NFAtoDFA();
+        }
         return test(string);
+    }
+
+    private boolean isNFA() {
+        for (Transition transition : transitions) {
+            if (transition.getTo().getValue().contains(",")) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void NFAtoDFA() {
+        ConverterNFAtoDFA converter = new ConverterNFAtoDFA(accepting, alphabet, transitions, states);
+        converter.execute();
+
+        this.accepting.clear();
+        this.transitions.clear();
+        this.states.clear();
+
+        this.accepting.addAll(converter.getNewAcceptings());
+        this.transitions.addAll(converter.getNewTransitions());
+        this.states.addAll(converter.getNewStates());
     }
 
     private State getNextState(State to, String symbol) {
@@ -87,11 +113,14 @@ public class Automaton {
         int index = 0;
         while (index < string.length()) {
             if (stringNotInAlphabet(string)) {
-                System.out.println("Palavra não existe no alfabeto!");
-                break;
+                return "Palavra não existe no alfabeto!";
             }
             String symbol = String.valueOf(string.charAt(index));
             state = getNextState(state, symbol);
+
+            if (state == null) {
+                return "String recusada!";
+            }
             index++;
         }
 
