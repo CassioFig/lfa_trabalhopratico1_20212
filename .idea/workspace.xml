@@ -30,7 +30,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="16" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_lfa_trabalhopratico1_20212" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -61,6 +61,8 @@
       <workItem from="1630952958099" duration="452000" />
       <workItem from="1632140800020" duration="603000" />
       <workItem from="1632524487009" duration="1401000" />
+      <workItem from="1632942402909" duration="364000" />
+      <workItem from="1633108319408" duration="844000" />
     </task>
     <servers />
   </component>

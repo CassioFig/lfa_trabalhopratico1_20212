@@ -58,6 +58,10 @@ public class Automaton {
         }
     }
 
+    public void testString(String string) {
+        test(string);
+    }
+
     private State getNextState(State to, String symbol) {
         for (Transition transition: transitions) {
             if (transition.getFrom().getValue().equals(to.getValue())
