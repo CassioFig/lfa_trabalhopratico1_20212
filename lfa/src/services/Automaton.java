@@ -58,8 +58,8 @@ public class Automaton {
         }
     }
 
-    public void testString(String string) {
-        test(string);
+    public String testString(String string) {
+        return test(string);
     }
 
     private State getNextState(State to, String symbol) {
@@ -82,7 +82,7 @@ public class Automaton {
     }
 
     // Função para testar a string
-    private void test(String string) {
+    private String test(String string) {
         State state = this.initial;
         int index = 0;
         while (index < string.length()) {
@@ -96,9 +96,9 @@ public class Automaton {
         }
 
         if (isAccepted(state)) {
-            System.out.println("String aceita!");
+            return "String aceita!";
         } else {
-            System.out.println("String recusada!");
+            return "String recusada!";
         }
     }
 

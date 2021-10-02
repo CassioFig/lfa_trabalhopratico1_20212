@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class AutomatonReader<T> {
     public ArrayList<T> getValues(Parameters parameter) throws FileNotFoundException {
-        Scanner in = new Scanner(new FileReader("entry.txt"));
+        Scanner in = new Scanner(new FileReader("lfa/src/entry.txt"));
         ArrayList<T> values = new ArrayList<>();
 
         while (in.hasNextLine()) {

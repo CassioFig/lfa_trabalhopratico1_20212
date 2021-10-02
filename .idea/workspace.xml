@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f31a6cc4-adbc-45cb-8b8a-163d8a011263" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lfa/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lfa/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lfa/src/entry.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lfa/src/entry.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lfa/src/utils/AutomatonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/lfa/src/utils/AutomatonReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +33,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="16" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_lfa_trabalhopratico1_20212" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -63,6 +66,7 @@
       <workItem from="1632524487009" duration="1401000" />
       <workItem from="1632942402909" duration="364000" />
       <workItem from="1633108319408" duration="844000" />
+      <workItem from="1633186263817" duration="933000" />
     </task>
     <servers />
   </component>
