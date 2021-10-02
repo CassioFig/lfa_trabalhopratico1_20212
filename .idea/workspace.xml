@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f31a6cc4-adbc-45cb-8b8a-163d8a011263" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lfa/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lfa/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lfa/src/entry.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lfa/src/entry.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lfa/src/services/Automaton.java" beforeDir="false" afterPath="$PROJECT_DIR$/lfa/src/services/Automaton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lfa/src/utils/ConverterNFAtoDFA.java" beforeDir="false" afterPath="$PROJECT_DIR$/lfa/src/utils/ConverterNFAtoDFA.java" afterDir="false" />
@@ -67,7 +66,8 @@
       <workItem from="1632524487009" duration="1401000" />
       <workItem from="1632942402909" duration="364000" />
       <workItem from="1633108319408" duration="844000" />
-      <workItem from="1633186263817" duration="5124000" />
+      <workItem from="1633186263817" duration="6492000" />
+      <workItem from="1633209233756" duration="1793000" />
     </task>
     <servers />
   </component>

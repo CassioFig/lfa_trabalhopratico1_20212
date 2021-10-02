@@ -15,7 +15,7 @@ public class Automaton {
     private State initial;
     private ArrayList<State> accepting = new ArrayList<>();
     private ArrayList<String> alphabet = new ArrayList<>();
-    public ArrayList<Transition> transitions = new ArrayList<>();
+    private ArrayList<Transition> transitions = new ArrayList<>();
 
     public Automaton() {
         this.automatonFile = new AutomatonReader();
@@ -62,6 +62,8 @@ public class Automaton {
     public String testString(String string) {
         if (isNFA()) {
             this.NFAtoDFA();
+            System.out.println("Autômato:");
+            this.printAutomaton();
         }
         return test(string);
     }
@@ -140,6 +142,21 @@ public class Automaton {
             index++;
         }
         return isValid;
+    }
+
+    private void printAutomaton() {
+        System.out.println("#transitions");
+        this.transitions.forEach(transition -> {
+                String transition_ = transition.getFrom().getValue() +
+                        ":" + transition.getAlphabet() +
+                        ">" + transition.getTo().getValue();
+
+                if (transition_.contains(",")) {
+                    System.out.println(transition_.replace(",", ""));
+                } else {
+                    System.out.println(transition_);
+                }
+        });
     }
 
 }
